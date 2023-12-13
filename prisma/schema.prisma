@@ -32,10 +32,10 @@ model Server {
   profileId  String
   profile    Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
-  member    Member[]
+  members   Member[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  Channel   Channel[]
+  channels  Channel[]
 
   @@index([profileId])
 }
